@@ -47,7 +47,6 @@ userRouter.post('/signin', async(c) => {
     }).$extends(withAccelerate())
     const body = await c.req.json();
     const {success} = signinInput.safeParse(body);
-    console.log('success', success)
     if(!success) {
         console.log('here')
         c.status(411);
